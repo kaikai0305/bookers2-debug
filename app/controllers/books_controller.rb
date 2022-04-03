@@ -1,5 +1,5 @@
 class BooksController < ApplicationController
-  before_action :correct_user, only: [:edit, :update]
+  before_action :correct_user, only: [:edit, :update, :destroy]
 
   def show
     @book = Book.find(params[:id])
@@ -41,8 +41,8 @@ class BooksController < ApplicationController
   end
 
   def destroy
-    @book = Book.find(params[:id])
-    @book.destoy
+    book = Book.find(params[:id])
+    book.destroy
     redirect_to '/books'
   end
 
