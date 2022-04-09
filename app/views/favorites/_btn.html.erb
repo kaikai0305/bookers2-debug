@@ -4,7 +4,7 @@
       <%= book.favorites.count %>いいね
     <% end %>
 <% else %>
-    <%= link_to book_favorites_path(book), method: :post do, remote: true %>
+    <%= link_to book_favorites_path(book), method: :post do, remote: true do %>
       <i class="fas fa-heart" aria-hidden="true"></i>
       <%= book.favorites.count %>いいね
     <% end %>
