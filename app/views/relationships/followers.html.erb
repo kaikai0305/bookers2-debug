@@ -1,12 +1,7 @@
-<div class="container">
+<h2>Follower Users</h2>
+<% if @users.exists? %>
+  <%= render '/users/index', users: @users %>
+<% else %>
+  <p>ユーザーはいません</p>
+<% end %>
 
-  <div class="row">
-
-      <h2>Follower Users</h2>
-
-
-      <%= render 'follow_list', user: @users %>
-
-  </div>
-
-</div>
